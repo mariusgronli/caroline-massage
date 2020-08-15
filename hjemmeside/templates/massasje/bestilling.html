@@ -1,0 +1,91 @@
+{% extends "massasje/base.html" %}
+{% block nav-bestilling %}
+<a href={% url 'hjemmeside:bestilling' %} class="nav-link size-adjust nav-line">Bestill time</a>
+{% endblock %}
+{% load static %}
+{% load bootstrap4 %}
+
+
+{% block content %}
+
+{% if kunde %}
+<br><br><br>
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1>Takk for din bestilling {{kunde}}!</h1>
+    <p class="lead">Jeg vil svare på din henvendelse so fort som mulig. Vanligvis innen en virkedag.</p>
+    <p> Hvis det haster kan du også ringe meg på 99555930.</p>
+  </div>
+</div>
+
+{% else %}
+<br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-7">
+
+    </div>
+    <div class="col-sm-5 text-center">
+      <h1 class="product-header">Send forespørsel om time</h1>
+    </div>
+  </div>
+
+
+  <div class="row">
+
+    <div class="col-7">
+      <form method="post">
+          {% csrf_token %}
+          {% bootstrap_form form %}
+          <div class="col-md text-center">
+            <input type="submit" value="Send" class="btn btn-send">
+          </div>
+      </form>
+    </div>
+
+    <div class="col-5">
+      <div class="row">
+        <div class="col-sm text-center">
+
+          <br>
+          <p>Send inn skjema</p>
+          <i class="fas fa-arrow-circle-down pil-ned"></i>
+          <p>Jeg vil kontakte deg neste arbeidsdag</p>
+          <i class="fas fa-arrow-circle-down pil-ned"></i>
+          <p>Vi vil avtale en tid som passer</p>
+          <i class="fas fa-arrow-circle-down pil-ned"></i>
+          <p>Gled deg til en avslappende massasje!</p>
+          <i class="fas fa-check-circle pil-ferdig"></i>
+
+          <!--<ul class="list-group list-group-flush">
+            <li class="list-group-item">Send inn skjema</li>
+            <i class="fas fa-arrow-circle-down"></i>
+            <li class="list-group-item">Jeg vil kontakte deg neste arbeidsdag</li>
+            <li class="list-group-item">Vi vil avtale en tid som passer</li>
+            <li class="list-group-item">Gled deg til en avslappende massasje!</li>
+            <li class="list-group-item"></li>
+          </ul>-->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm text-center">
+          <br><br>
+          <div class="card card-bestilling">
+            <div class="card-header card-text-header">
+                <p>Kontakt info</p>
+            </div>
+            <div class="card-body card-text-body">
+              <p class="hoover-p"><a href="mailto:caroline.nygren@gmail.com" style="color:white;">caroline.nygren@gmail.com</a></p>
+              <p class="hoover-p">99555930</p>
+              <p class="hoover-p">Gauterødveien 6, 3154 Tolvsrød</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% endblock %}

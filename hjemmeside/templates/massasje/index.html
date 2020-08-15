@@ -1,0 +1,90 @@
+{% extends "massasje/base.html" %}
+{% block nav-behandling %}
+  <a href={% url 'home' %} class="nav-link size-adjust nav-line" style="margin-left:60px;margin-right:60px;">Behandlinger</a>
+{% endblock %}
+{% load static %}
+
+
+{% block content %}
+
+<br>
+<br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm text-left">
+        <h1 class="product-header">GRUNNLEGGENDE</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm text-left">
+        <p class="lead">Kom i kontakt med deg selv i denne <br> beroligende behandlingen.</p>
+        <p>Våre grunnende behandlinger er en
+          mulighet til å senke pulsen og skape rom for
+          refleksjon. Med fokus på behag og velvære
+          er dette den perfekte behandlingen for deg
+          som holder spenninger fra hverdagen i
+          både kropp og sinn.</p>
+      </div>
+      <div class="col-sm d-flex justify-content-center">
+        <div class="h-50 w-50">
+        <img src="{% static "img/relax.jpg" %}" class="img-fluid rounded" alt="Responsive image">
+        </div>
+      </div>
+    </div><!-- end row -->
+
+    <br>
+    <br>
+
+      <div class="row">
+        <div class="col-sm d-flex justify-content-center">
+          <div class="h-50 w-75">
+          <img src="{% static "img/relax7.jpg" %}" class="img-fluid rounded" alt="Responsive image" style="padding-top:50px;">
+          </div>
+        </div>
+
+        <div class="col-sm text-center">
+          <br>
+          <br>
+          <p class="lead">25 MINUTTER <img src="https://www.freeiconspng.com/uploads/line-png-16.png" width="35" alt="Line PNG Picture"/> 550KR</p>
+          <br>
+          <p class="lead">50 MINUTTER <img src="https://www.freeiconspng.com/uploads/line-png-16.png" width="35" alt="Line PNG Picture"/> 790KR</p>
+          <br>
+          <p class="lead">80 MINUTTER <img src="https://www.freeiconspng.com/uploads/line-png-16.png" width="35" alt="Line PNG Picture"/> 1295KR</p>
+          <br>
+          <p class="lead">115 MINUTTER<img src="https://www.freeiconspng.com/uploads/line-png-16.png" width="35" alt="Line PNG Picture"/> 1595KR</p>
+        </div>
+      </div><!-- end row -->
+
+      <br>
+      <br>
+
+      <div class="row">
+        <div class="col-sm text-left">
+          <h1 class="product-header">LØFTENDE</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm text-left">
+          <p class="lead">La kroppen få ny giv i denne <br> stimulerende behandlingen.</p>
+          <p>Våre grunnende behandlinger er en
+            mulighet til å senke pulsen og skape rom for
+            refleksjon. Med fokus på behag og velvære
+            er dette den perfekte behandlingen for deg
+            som holder spenninger fra hverdagen i
+            både kropp og sinn.</p>
+        </div>
+        <div class="col-sm d-flex justify-content-center">
+          <div class="h-50 w-50">
+          <img src="{% static "img/relax3.jpg" %}" class="img-fluid rounded" alt="Responsive image">
+        </div>
+        </div>
+      </div><!-- end row -->
+
+    <br>
+    <br>
+    <br>
+
+  </div><!--end container-->
+
+{% endblock %}

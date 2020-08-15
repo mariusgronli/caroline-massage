@@ -1,0 +1,158 @@
+body html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Background */
+
+.backgroundimg{
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(237,221,208,1) 100%);
+  height: 100%;
+}
+
+
+
+/* Navbar */
+
+header[role="banner"] #logo-main {
+  display: block;
+  margin: 20px auto;
+}
+#navbar-primary.navbar-default {
+  background: transparent;
+  border: none;
+}
+#navbar-primary.navbar-default .navbar-nav {
+  width: 100%;
+  text-align: center;
+}
+#navbar-primary.navbar-default .navbar-nav > li {
+  display: inline-block;
+  float: none;
+}
+#navbar-primary.navbar-default .navbar-nav > li > a {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Logo */
+
+#logo{
+  color:#E39B6D;
+  font-family: 'Lato', sans-serif;
+  font-size: 4rem;
+}
+
+.product-header{
+  color:#A45225;
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+}
+
+/* nav-times */
+.size-adjust{
+  font-size: 1.2rem;
+}
+
+.nav-line{
+  border-bottom: solid 1px brown;
+}
+
+/* Card-bestilling */
+
+.card-bestilling{
+  background-color: #4a2714bf;
+}
+
+/* Glyphs-piler */
+.pil-ned{
+  font-size: 1.2rem;
+  color:#E2B56C;
+}
+.pil-ferdig{
+  font-size: 1.4rem;
+  color: #5ea213;
+}
+
+.card-text-header{
+  font-size: 1.5rem;
+  color: white;
+}
+
+.card-text-body{
+  font-size: 1.2rem;
+  color:white;
+}
+
+/* Fonts */
+
+.om-font{
+  font-family: 'Calligraffitti', cursive;
+  font-size: 3rem;
+  color:#A45225;
+}
+
+/* Footer */
+
+.social{
+  color:#5a460e;
+}
+
+.social:hover{
+  color: #3a2809;
+  transition: 0.3s;
+}
+
+.hoover-p:hover{
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* Send button */
+
+.btn-send {
+  color: #FFFFFF;
+  background-color: #C78245;
+  border-color: #FAFAFA;
+}
+
+.btn-send:hover,
+.btn-send:focus,
+.btn-send:active,
+.btn-send.active,
+.open .dropdown-toggle.btn-send {
+  color: #FFFFFF;
+  background-color: #915A30;
+  border-color: #FAFAFA;
+  transition: 0.2s;
+}
+
+.btn-send:active,
+.btn-send.active,
+.open .dropdown-toggle.btn-send {
+  background-image: none;
+}
+
+.btn-send.disabled,
+.btn-send[disabled],
+fieldset[disabled] .btn-send,
+.btn-send.disabled:hover,
+.btn-send[disabled]:hover,
+fieldset[disabled] .btn-send:hover,
+.btn-send.disabled:focus,
+.btn-send[disabled]:focus,
+fieldset[disabled] .btn-send:focus,
+.btn-send.disabled:active,
+.btn-send[disabled]:active,
+fieldset[disabled] .btn-send:active,
+.btn-send.disabled.active,
+.btn-send[disabled].active,
+fieldset[disabled] .btn-send.active {
+  background-color: #C78245;
+  border-color: #FAFAFA;
+}
+
+.btn-send .badge {
+  color: #C78245;
+  background-color: #FFFFFF;
+}

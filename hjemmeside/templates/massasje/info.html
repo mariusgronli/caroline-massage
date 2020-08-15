@@ -1,0 +1,83 @@
+{% extends "massasje/base.html" %}
+{% block nav-om-caroline %}
+<a href={% url 'hjemmeside:caroline' %} class="nav-link size-adjust nav-line">Caroline</a>
+{% endblock %}
+{% load static %}
+{% load bootstrap4 %}
+
+
+{% block content %}
+
+<br>
+<br>
+
+{% if kunde %}
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1>Takk for din henvendelse {{kunde}}!</h1>
+    <p class="lead">Jeg vil svare på din henvendelse so fort som mulig. Vanligvis innen en virkedag.</p>
+    <p> Hvis det haster kan du også ringe meg på 99555930.</p>
+  </div>
+</div>
+
+{% else %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm d-flex justify-content-center">
+      <div class="w-50">
+        <img src="{% static "img/om3.jpg" %}" class="img-fluid rounded" alt="Responsive image">
+      </div>
+    </div>
+
+    <div class="col-sm">
+      <p class="om-font">Caroline</p>
+          <p class="lead">Med øye på de små detaljene driver jeg min
+             <br>praksis med ett mål - å gi deg en <i>bedre hverdag</i>.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget erat at mi iaculis suscipit. Nulla facilisi. Sed vel consectetur erat. Sed vestibulum turpis rutrum fringilla consectetur. Duis id est eu orci egestas posuere. Ut bibendum magna felis, vitae viverra arcu fringilla quis. Pellentesque a justo lobortis, mollis orci lacinia, vestibulum eros. Suspendisse vitae arcu facilisis, placerat purus vel, euismod ante. Quisque sit amet ullamcorper mauris.</p>
+    </div>
+  </div>
+  <br><br><br>
+  <div class="row">
+    <div class="col-sm">
+      <h1 class="product-header">Kontakt meg</h1>
+    </div>
+    <div class="col-sm">
+
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <form method="post">
+          {% csrf_token %}
+          {% bootstrap_form form %}
+          <div class="col-md text-center">
+            <input type="submit" value="Send" class="btn btn-send">
+          </div>
+      </form>
+    </div>
+    <div class="col-sm d-flex justify-content-center">
+      <div class="mapouter">
+        <div class="gmap_canvas">
+          <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=levels%2C%20t%C3%B8nsberg&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="margin-top:30px;">
+          </iframe>
+          <a href="https://www.embedgooglemap.net"></a>
+        </div>
+        <style>.mapouter{position:relative;text-align:right;height:389px;width:417px;}
+        .gmap_canvas {overflow:hidden;background:none!important;height:389px;width:417px;}
+      </style>
+    </div>
+    </div>
+
+  </div>
+
+  <br>
+  <br>
+
+
+</div>
+
+{% endif %}
+
+{% endblock %}
