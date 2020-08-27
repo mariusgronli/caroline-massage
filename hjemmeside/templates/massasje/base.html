@@ -47,17 +47,17 @@
           <ul class="navbar-nav mx-auto">
               <li class="nav-item">
                 {% block nav-bestilling %}
-                  <a href={% url 'hjemmeside:bestilling' %} class="nav-link size-adjust">Bestill time</a>
+                  <a href={% url 'hjemmeside:bestilling' %} class="nav-link" style="font-size: 1rem;">Bestill time</a>
                 {% endblock %}
               </li>
               <li class="nav-item">
                 {% block nav-behandling %}
-                  <a href={% url 'home' %} class="nav-link size-adjust" style="padding-left:60px;padding-right:60px;">Behandlinger</a>
+                  <a href={% url 'home' %} class="nav-link" style="padding-left:60px;padding-right:60px;font-size: 1rem;">Behandlinger</a>
                 {% endblock %}
               </li>
               <li class="nav-item">
                 {% block nav-om-caroline %}
-                  <a href={% url 'hjemmeside:caroline' %} class="nav-link size-adjust">Caroline</a>
+                  <a href={% url 'hjemmeside:caroline' %} class="nav-link" style="font-size: 1rem;">Caroline</a>
                 {% endblock %}
               </li>
           </ul>
