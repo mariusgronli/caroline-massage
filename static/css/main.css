@@ -49,9 +49,25 @@ header[role="banner"] #logo-main {
   font-size: 2rem;
 }
 
+#jumbo-bg{
+  background-color: #fbf1e9!important;
+}
+#jumbo-bg-2{
+  background-color: #fdebdd!important;
+}
+#jumbo-bg-3{
+  background-color: #fff6ef!important;
+}
+
+
+
+
 /* nav-times */
 .size-adjust{
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+.size-adjust-p{
+  font-size: 1.1rem;
 }
 
 .nav-line{
