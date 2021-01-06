@@ -28,7 +28,9 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['127.0.0.1', 'mariusgronli.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'nygren.pythonanywhere.com',
+    'www.carolinenygren.no',
+    'carolinenygren.no']
 
 
 # Application definition
