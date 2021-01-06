@@ -1,6 +1,6 @@
 {% extends "massasje/base.html" %}
 {% block nav-bestilling %}
-<a href={% url 'hjemmeside:bestilling' %} class="nav-link size-adjust nav-line">Bestill time</a>
+<a href={% url 'hjemmeside:bestilling' %} class="nav-link nav-size nav-line" style="color:black;">Bestill time</a>
 {% endblock %}
 {% load static %}
 {% load bootstrap4 %}
@@ -8,74 +8,13 @@
 
 {% block content %}
 
-{% if kunde %}
+
 <br><br><br>
-<div class="container">
-  <div class="jumbotron text-center">
-    <h1>Takk for din bestilling {{kunde}}!</h1>
-    <p class="lead">Jeg vil svare på din henvendelse so fort som mulig. Vanligvis innen en virkedag.</p>
-    <p> Hvis det haster kan du også ringe meg på 99555930.</p>
-  </div>
+<div class="container-fluid"> <!-- Start bestill time -->
+  <iframe src="https://bestill.timma.no/bedrehverdag?fbclid=IwAR1-2qky-A6EY4biCRBVfnUBmAlhgdC-nQhmbee3h9suCT2BsXHt3WWJoIQ" width="100%" height="1300px" style="border:0;">
+  </iframe>
+
 </div>
 
-{% else %}
-<br><br><br>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-7">
-
-    </div>
-    <div class="col-lg-5 text-center">
-      <h1 class="product-header">Send forespørsel om time</h1>
-    </div>
-  </div>
-
-
-  <div class="row">
-
-    <div class="col-lg-7">
-      <form method="post">
-          {% csrf_token %}
-          {% bootstrap_form form %}
-          <div class="col-md text-center">
-            <input type="submit" value="Send" class="btn btn-send">
-          </div>
-      </form>
-    </div>
-
-    <div class="col-lg-5">
-      <div class="row">
-        <div class="col-sm text-center">
-          <br>
-          <p>Send inn skjema</p>
-          <i class="fas fa-arrow-circle-down pil-ned"></i>
-          <p>Jeg vil kontakte deg neste arbeidsdag</p>
-          <i class="fas fa-arrow-circle-down pil-ned"></i>
-          <p>Vi vil avtale en tid som passer</p>
-          <i class="fas fa-arrow-circle-down pil-ned"></i>
-          <p>Gled deg til en avslappende massasje!</p>
-          <i class="fas fa-check-circle pil-ferdig"></i>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm text-center">
-          <br>
-          <br>
-          <div class="jumbotron" style="background-color: #fdebdd!important">
-            <h1 class="product-header text-center">Kontakt info</h1>
-            <br>
-            <br>
-            <p class="hoover-p"><a href="mailto:caroline.nygren@gmail.com" style="color:black;">caroline.nygren@gmail.com</a></p>
-            <p class="hoover-p">99555930</p>
-            <p class="hoover-p">Gauterødveien 6, 3154 Tolvsrød</p>
-          </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-{% endif %}
 
 {% endblock %}

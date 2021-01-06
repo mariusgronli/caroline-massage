@@ -11,7 +11,6 @@ body html {
 }
 
 
-
 /* Navbar */
 
 header[role="banner"] #logo-main {
@@ -69,10 +68,15 @@ header[role="banner"] #logo-main {
 .size-adjust-p{
   font-size: 1.1rem;
 }
-
 .nav-line{
   border-bottom: solid 1px brown;
 }
+.nav-size{
+  font-size: 1.3rem;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
 
 /* Card-bestilling */
 
@@ -123,7 +127,6 @@ header[role="banner"] #logo-main {
   font-weight: bold;
   transition: 0.3s;
 }
-
 
 
 /* Send button */

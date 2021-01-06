@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Nygren</title>
+    <title>Caroline Nygren</title>
 
     {# CDN's #}
     {# Jquary and poppers #}
@@ -47,17 +47,22 @@
           <ul class="navbar-nav mx-auto">
               <li class="nav-item">
                 {% block nav-bestilling %}
-                  <a href={% url 'hjemmeside:bestilling' %} class="nav-link" style="font-size: 1rem;">Bestill time</a>
+                  <a href={% url 'hjemmeside:bestilling' %} class="nav-link nav-size">Bestill time</a>
+                {% endblock %}
+              </li>
+              <li class="nav-item">
+                {% block nav-gavekort %}
+                  <a href={% url 'hjemmeside:gavekort' %} class="nav-link nav-size">Kjøp gavekort</a>
                 {% endblock %}
               </li>
               <li class="nav-item">
                 {% block nav-behandling %}
-                  <a href={% url 'home' %} class="nav-link" style="padding-left:60px;padding-right:60px;font-size: 1rem;">Behandlinger</a>
+                  <a href={% url 'home' %} class="nav-link nav-size">Behandlinger</a>
                 {% endblock %}
               </li>
               <li class="nav-item">
                 {% block nav-om-caroline %}
-                  <a href={% url 'hjemmeside:caroline' %} class="nav-link" style="font-size: 1rem;">Caroline</a>
+                  <a href={% url 'hjemmeside:caroline' %} class="nav-link nav-size">Caroline</a>
                 {% endblock %}
               </li>
           </ul>
@@ -87,7 +92,7 @@
       <div class="d-flex justify-content-around">
         <div class="p-2 bd-highlight"><a href="https://www.instagram.com/bedre.hverdag/"><i class="fab fa-instagram fa-2x social"></i></a></div>
         <div class="p-2 bd-highlight"><a href="https://www.facebook.com/massasjenygren/"><i class="fab fa-facebook fa-2x social"></i></a></div>
-        <div class="p-2 bd-highlight"><a href="#"><i class="fab fa-linkedin fa-2x social"></i></a></div>
+        <div class="p-2 bd-highlight"><a href="mailto:bedrehverdagnygren@gmail.com"><i class="fas fa-envelope fa-2x social"></i></a></div>
       </div>
       <br>
     <div class="row">
@@ -95,7 +100,7 @@
         <p style="font-size:0.8rem;">©Caroline Nygren 2020.</p>
       </div>
       <div class="col-sm text-right">
-        <p style="font-size:0.8rem;"> Hjemmeside produsert av: <a href="mailto:mariusgronli@email.com" style="color:black;">Marius Grønli</a></p>
+        <p style="font-size:0.8rem;"> Hjemmeside produsert av: <a href="mailto:mariusgronli@email.com" style="color:black; font-size:1rem;">Marius Grønli</a></p>
       </div>
 
     </div>
