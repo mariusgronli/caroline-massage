@@ -32,23 +32,15 @@
 
 <div class="backgroundimg">
 
-  <nav class="navbar navbar-expand-lg navbar-light flex-column align-items-stretch">
       <div class="d-flex">
           {# <a href="#" class="navbar-brand mx-sm-auto mr-auto" id="logo">NYGREN</a> #}
-
           <div class="col-sm d-flex justify-content-center">
-
             <img src="{% static "img/logo.png" %}" class="img-fluid rounded" alt="Responsive image" style="padding:20px 0px;">
-
           </div>
-
-
-          <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
-              <span class="navbar-toggler-icon"></span>
-          </button>
       </div>
-      <div class="collapse navbar-collapse w-100 sticky-top" id="navbarMenu">
-          <ul class="navbar-nav mx-auto">
+    <nav class="navbar">
+      <div class="col-sm" id="navbarMenu">
+          <ul class="navbar-nav">
               <li class="nav-item">
                 {% block nav-bestilling %}
                   <a href={% url 'hjemmeside:bestilling' %} class="nav-link nav-size">Bestill time</a>
@@ -71,7 +63,7 @@
               </li>
           </ul>
       </div>
-  </nav>
+    </nav>
 
 
 

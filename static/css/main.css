@@ -34,6 +34,12 @@ header[role="banner"] #logo-main {
   padding-right: 30px;
 }
 
+.navbar-nav{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-evenly;
+}
+
 /* Logo */
 
 #logo{
@@ -58,9 +64,6 @@ header[role="banner"] #logo-main {
   background-color: #fff6ef!important;
 }
 
-
-
-
 /* nav-times */
 .size-adjust{
   font-size: 1rem;
@@ -73,9 +76,13 @@ header[role="banner"] #logo-main {
 }
 .nav-size{
   font-size: 1.3rem;
-  margin-right: 40px;
-  margin-left: 40px;
+  color: rgba(0,0,0,.5);
 }
+
+.nav-size:hover{
+  color:black;
+}
+
 
 
 /* Card-bestilling */
