@@ -13,26 +13,14 @@ body html {
 
 /* Navbar */
 
-header[role="banner"] #logo-main {
-  display: block;
-  margin: 20px auto;
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  .nav-size{
+    font-size: 1.5rem;
+    color: rgba(0,0,0,.5);
+  }
 }
-#navbar-primary.navbar-default {
-  background: transparent;
-  border: none;
-}
-#navbar-primary.navbar-default .navbar-nav {
-  width: 100%;
-  text-align: center;
-}
-#navbar-primary.navbar-default .navbar-nav > li {
-  display: inline-block;
-  float: none;
-}
-#navbar-primary.navbar-default .navbar-nav > li > a {
-  padding-left: 30px;
-  padding-right: 30px;
-}
+
 
 .navbar-nav{
   display:flex;
@@ -83,8 +71,6 @@ header[role="banner"] #logo-main {
   color:black;
 }
 
-
-
 /* Card-bestilling */
 
 .card-bestilling{
@@ -123,6 +109,7 @@ header[role="banner"] #logo-main {
 
 .social{
   color:#5a460e;
+  font-size: 3rem;
 }
 
 .social:hover{
