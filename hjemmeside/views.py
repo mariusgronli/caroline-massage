@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from django.core.mail import send_mail,BadHeaderError
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse
 
 from .forms import KontaktForm
 
@@ -27,9 +28,9 @@ def kontaktView(request):
             #formater melding som blir sendt i mail
             melding = '{} \n avsender: {}'.format(melding_raw,epost)
             try:
-                send_mail(emne, melding, epost, ['mariusgronli@gmail.com'])
+                send_mail(emne, melding, epost, ['bedrehverdagnygren@gmail.com'])
             except BadHeaderError:
-                return HttpResponse('Noe gikk galt, send mail til: mariusgronli@gmail.com')
+                return HttpResponse('Noe gikk galt, send mail til: bedrehverdagnygren@gmail.com')
             return render(request,'massasje/info.html',{'form':form,'kunde':epost})
     # if a GET (or any other method) we'll create a blank form
     else:
